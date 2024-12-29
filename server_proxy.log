@@ -1,0 +1,4 @@
+2024-12-27 10:57:30,914 [INFO] creating SSL-Contex for server and start server
+2024-12-27 10:57:30,919 [INFO] creating server_soket
+2024-12-27 10:57:30,921 [INFO] poxy-server is started on:127.0.0.1:8080
+2024-12-27 10:57:30,921 [INFO] accept connect from client

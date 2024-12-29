@@ -1,0 +1,180 @@
+
+app=Flask(__name__)
+@app.route("/")
+def home():
+    return "ready,go"
+
+while True:
+    if __name__ =='__main__':
+        app.run(host='0.0.0.0', port=5000)
+
+
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_socket.bind(("0.0.0.0", 6666))
+server_socket.listen()
+
+осталось:
+клиентская часть
+само приложение и туда запихать функционал
+
+
+
+# Укажите адрес прокси-сервера и порт
+proxy = {
+    "http": "http://<username>:<password>@<proxy_ip>:<proxy_port>",
+    "https": "http://<username>:<password>@<proxy_ip>:<proxy_port>",
+}
+
+# Ваш запрос
+try:
+    response = requests.get("http://api.ipify.org", proxies=proxy)
+    print("Ваш IP после подключения к прокси:", response.text)
+except requests.exceptions.RequestException as e:
+    print("Произошла ошибка:", e)
+
+
+в handle_client try-в начале самом а ошибки в конце самом
+try:
+
+ except Exception as t:
+        print("connection is lost ")
+    finally:
+        print("connection close")
+        conn.close()
+
+import socket
+import requests
+from bs4 import BeautifulSoup
+import okno
+
+host='0.0.0.0'
+port=5000
+
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_socket.bind(("0.0.0.0", 5000))
+server_socket.listen()
+
+print("vpn is started")
+
+def handle_client(conn, addr):
+        print(f"connecting.. {addr}")
+        #подкл к серверу сша
+        german_server_adress=("104.16.108.45",80)
+        try:
+            german_conn=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            german_conn.connect(german_server_adress)
+            print("connected to the USA server")
+        except  Exception as e:
+            print("try to conection is lost")
+        while True:
+            try:
+                data = conn.recv(1024)
+                if not data: break
+                print("received data from {addr}: {data.decode()}".format(addr=addr, data=data))
+                german_conn: socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                response=german_conn.recv(1024).decode('utf-8')
+                print("response received from server:{response.decode('utf-8')}".format(response=response))
+                conn.sendall(data)
+            except ConnectionResetError:
+                break
+
+proxies = {
+    'http':"http://104.16.108.45:80"
+}
+headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+    'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0'}
+
+def start_server():
+    with socket.server(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
+        server_socket.bind((host,port))
+        server_socket.listen()
+        print("server is started")
+
+def get_location(url):
+    response = requests.get(url=url,headers=headers,proxies=proxies)
+    soup = BeautifulSoup(response.text,'lxml')
+    ip=soup.find('div',class_='ip').text.strip()
+    print("ip:"+ip)
+
+def main():
+    while True:
+        conn, addr = server_socket.accept()  # Принять новое соединение
+        print(f"Connected by {addr}")
+        #handle_client(conn)  # Передать объект соединения в функцию
+        #start_server()
+        #get_location(url="https://2ip.ru")
+        okno.main()
+
+if name=="main":
+    main()
+
+print("Выберите на какой сервер хотите подключится,есть варианты:"
+      "США(ip:104.16.83.0,port:80);Франция(ip:212.83.138.245,port:50894")
+
+
+def start_server(port, host='127.0.0.1'): # теперь указываем хост явно
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
+        server_socket.bind((host, port))
+        server_socket.listen()
+        print(f"Сервер запущен на {host}:{port}")
+        while True:
+            client_socket, addr = server_socket.accept()
+            client_thread = threading.Thread(target=handle_client, args=(client_socket, addr))
+            client_thread.daemon = True # позволяет корректно закрыть сервер
+            client_thread.start()
+
+def send_request_to_external_server(ip_address, port, data):
+    url = f"http://{ip_address}:{port}/" #  или другой протокол и путь
+    try:
+        response = requests.post(url, data=data) # POST запрос
+        response.raise_for_status() # Проверка на ошибки (4xx, 5xx)
+        print(f"Успешный запрос: {response.status_code}")
+        print(response.text)
+    except requests.exceptions.RequestException as e:
+        print(f"Ошибка запроса: {e}")
+
+    '''# пример использования:
+    interface = "Ethernet"  # Замените на ваше имя интерфейса
+    new_ip = "192.168.1.100"
+    netmask = "255.255.255.0"  # маска подсети для Windows
+    gateway = "192.168.1.1"
+    try:
+        command = [
+            'netsh', 'interface', 'ipv4', 'set', 'address',
+            'name="' + interface + '"', 'static', new_ip, netmask, gateway
+        ]
+        subprocess.run(command, check=True)
+        print(f"IP-адрес интерфейса {interface} успешно изменен на {new_ip}")
+    except subprocess.CalledProcessError as e:
+        print(f"Ошибка при изменении IP-адреса: {e}")'''
+
+
+server:
+import socket
+import socks5server
+import ssl
+import paramiko
+import socks
+import threading
+import OpenSSL
+from scapy.all import *
+from OpenSSL import crypto
+import sys
+
+client:
+import socket
+from scapy.all import *
+
+тз:
+отправка пкетов данных с шифрованием(простых):
+этапы:
+1.отправка простых пакетов
+2.шифровка этих пакетов
+3.отправка на сервер
+подключение моего сервера к удаленному серверу
+изменение Ip адреса(хз как надо гуглить и насиловать нейронку(()
+:C
+путь:\Users\svse3\PycharmProjects\tgbots\ProjectVPN
+путь на ноуте:C:\Users\svse3\PycharmProjects\fulprojects\ProjectVPN
+№динам подмена аip ажресса
+
