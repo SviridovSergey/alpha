@@ -1,47 +1,44 @@
 import asyncio
-import sys
-from scapy.layers.inet import IP, TCP
-from scapy.all import send
 import logging
-
+import aiohttp
+import sys
+import ssl
+# Настройка логирования
 logging.basicConfig(
-    level=logging.INFO,  # Уровень логирования (DEBUG, INFO, WARNING, ERROR, CRITICAL)
-    format="%(asctime)s [%(levelname)s] %(message)s",  # Формат сообщений
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
-        logging.FileHandler("client.log"),  # Логи записываются в файл server.log
-        logging.StreamHandler()  # Логи выводятся в консоль
+        logging.FileHandler("client.log"),
+        logging.StreamHandler()
     ]
 )
 
-async def send_packet(packet):
-        send(packet)
+async def send_request(local_server_ip, local_server_port):
+    """Отправляет HTTPS-запрос на локальный сервер."""
+    try:
+        # Отключаем проверку SSL, если используется самоподписанный сертификат
+        ssl_context = ssl.create_default_context()
+        ssl_context.check_hostname = False
+        ssl_context.verify_mode = ssl.CERT_NONE
 
-async def client(local_server_ip, local_server_port):
-        try:
-            while True:
-                pkt = IP(dst=local_server_ip) / TCP(dport=local_server_port, flags="S")
-                await send_packet(pkt)
-                print(f"Отправлен пакет: {pkt.summary()}")
-                logging.info('отправлен пакет')
-                await asyncio.sleep(1)
+        async with aiohttp.ClientSession() as session:
+            async with session.get(
+                f"https://{local_server_ip}:{local_server_port}",
+                ssl=ssl_context
+            ) as response:
+                logging.info(f"Ответ от локального сервера: {await response.text()}")
+    except aiohttp.ClientError as e:
+        logging.error(f"Ошибка клиента при отправке HTTPS-запроса: {e}")
+    except Exception as e:
+        logging.error(f"Неизвестная ошибка: {e}")
 
-        except asyncio.CancelledError:
-            pass
-        except Exception as e:
-            print(f"Ошибка клиента: {e}")
-        finally:
-            print("Клиент завершил работу.")
-            return 0
-
-def read_config(filename):
-        with open(filename, 'r') as file:
-            return file.read().strip()
+async def main(local_server_ip, local_server_port):
+    await send_request(local_server_ip, local_server_port)
 
 if __name__ == "__main__":
-        if len(sys.argv) < 3:
-            print("Использование: python client.py <ip_адрес_локального_сервера> <порт_локального_сервера>")
-            sys.exit(1)
-        local_server_ip = read_config("local_server_ip.txt")
-        local_server_port = int(read_config("local_server_port.txt"))
-        print(f"создан локальный сервер на: {local_server_ip}:{local_server_port}")
-        asyncio.run(client(local_server_ip, local_server_port))
+    if len(sys.argv) < 3:
+        print("Использование: python client.py <ip_адрес_локального_сервера> <порт_локального_сервера>")
+        sys.exit(1)
+    local_server_ip = sys.argv[1]
+    local_server_port = int(sys.argv[2])
+    asyncio.run(main(local_server_ip, local_server_port))

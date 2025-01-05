@@ -2,3 +2,145 @@
 2024-12-27 10:57:30,919 [INFO] creating server_soket
 2024-12-27 10:57:30,921 [INFO] poxy-server is started on:127.0.0.1:8080
 2024-12-27 10:57:30,921 [INFO] accept connect from client
+2024-12-29 17:42:34,242 [INFO] creating SSL-Contex for server and start server
+2024-12-29 17:42:34,265 [INFO] creating server_soket
+2024-12-29 17:42:34,266 [INFO] poxy-server is started on:127.0.0.1:8080
+2024-12-29 17:42:34,266 [INFO] accept connect from client
+2024-12-30 18:50:10,606 [INFO] creating SSL-Contex for server and start server
+2024-12-30 18:50:10,629 [INFO] creating server_soket
+2024-12-30 18:50:10,630 [INFO] poxy-server is started on:127.0.0.1:8080
+2024-12-30 18:50:10,630 [INFO] accept connect from client
+2024-12-30 18:58:27,320 [INFO] creating SSL-Contex for server and start server
+2024-12-30 18:58:27,325 [INFO] creating server_soket
+2024-12-30 18:58:27,329 [INFO] poxy-server is started on:127.0.0.1:8080
+2024-12-30 18:58:27,330 [INFO] accept connect from client
+2024-12-30 18:59:19,622 [INFO] creating SSL-Contex for server and start server
+2024-12-30 18:59:19,626 [INFO] creating server_soket
+2024-12-30 19:00:13,938 [INFO] creating SSL-Contex for server and start server
+2024-12-30 19:00:13,942 [INFO] creating server_soket
+2024-12-30 19:04:28,333 [INFO] creating SSL-Contex for server and start server
+2024-12-30 19:04:28,338 [INFO] creating server_soket
+2024-12-30 19:18:49,549 [INFO] creating SSL-Contex for server and start server
+2024-12-30 19:18:49,554 [INFO] creating server_soket
+2024-12-30 19:21:21,114 [INFO] creating SSL-Contex for server and start server
+2024-12-30 19:21:21,124 [INFO] creating server_soket
+2024-12-30 19:21:45,761 [INFO] creating SSL-Contex for server and start server
+2024-12-30 19:21:45,771 [INFO] creating server_soket
+2024-12-30 19:32:12,814 [INFO] creating SSL-Contex for server and start server
+2024-12-30 19:32:12,825 [INFO] creating server_soket
+2024-12-30 19:32:25,895 [INFO] creating SSL-Contex for server and start server
+2024-12-30 19:32:25,905 [INFO] creating server_soket
+2024-12-30 19:32:54,674 [INFO] creating SSL-Contex for server and start server
+2024-12-30 19:32:54,684 [INFO] creating server_soket
+2024-12-30 19:32:54,688 [INFO] proxy-server is started on:127.0.0.1:8080
+2024-12-30 19:32:54,688 [INFO] accept connect from client
+2024-12-31 19:34:13,707 [INFO] creating SSL-Contex for server and start server
+2024-12-31 19:34:13,712 [INFO] creating server_soket
+2024-12-31 19:34:13,713 [INFO] proxy-server is started on:127.0.0.1:8080
+2024-12-31 19:34:13,713 [INFO] accept connect from client
+2024-12-31 19:34:20,643 [INFO] Локальный сервер запущен на 127.0.0.1:8888
+2024-12-31 19:43:57,820 [INFO] creating SSL-Contex for server and start server
+2024-12-31 19:43:57,825 [INFO] creating server_soket
+2024-12-31 19:43:57,826 [INFO] proxy-server is started on:127.0.0.1:8080
+2024-12-31 19:43:57,826 [INFO] accept connect from client
+2024-12-31 19:44:07,376 [INFO] Локальный сервер запущен на 127.0.0.1:8888
+2024-12-31 19:51:11,037 [INFO] creating SSL-Contex for server and start server
+2024-12-31 19:51:11,044 [INFO] creating server_soket
+2024-12-31 19:51:11,045 [INFO] proxy-server is started on:127.0.0.1:8080
+2024-12-31 19:51:11,046 [INFO] accept connect from client
+2024-12-31 19:51:21,550 [INFO] Локальный сервер запущен на 127.0.0.1:8888
+2024-12-31 19:53:25,578 [INFO] creating SSL-Contex for server and start server
+2024-12-31 19:53:25,583 [INFO] creating server_soket
+2024-12-31 19:53:25,585 [INFO] proxy-server is started on:127.0.0.1:8080
+2024-12-31 19:53:25,585 [INFO] accept connect from client
+2024-12-31 19:53:45,974 [INFO] Локальный сервер запущен на 127.0.0.1:8888
+2024-12-31 20:05:11,261 [INFO] creating SSL-Contex for server and start server
+2024-12-31 20:05:11,266 [INFO] creating server_soket
+2024-12-31 20:05:11,266 [INFO] proxy-server is started on:127.0.0.1:8080
+2024-12-31 20:05:11,267 [INFO] accept connect from client
+2024-12-31 20:05:18,800 [INFO] Локальный сервер запущен на 127.0.0.1:8888
+2024-12-31 20:07:08,361 [INFO] creating SSL-Contex for server and start server
+2024-12-31 20:07:08,367 [INFO] creating server_soket
+2024-12-31 20:07:08,374 [INFO] proxy-server is started on:127.0.0.1:8080
+2024-12-31 20:07:08,374 [INFO] accept connect from client
+2024-12-31 20:07:23,220 [INFO] Локальный сервер запущен на 127.0.0.1:8888
+2024-12-31 20:09:42,107 [INFO] creating SSL-Contex for server and start server
+2024-12-31 20:09:42,113 [INFO] creating server_soket
+2024-12-31 20:11:20,670 [INFO] creating SSL-Contex for server and start server
+2024-12-31 20:11:20,675 [INFO] creating server_soket
+2024-12-31 23:35:10,706 [INFO] creating SSL-Contex for server and start server
+2024-12-31 23:35:10,716 [INFO] creating server_soket
+2024-12-31 23:35:10,717 [INFO] proxy-server is started on::8080
+2024-12-31 23:35:10,718 [INFO] accept connect from client
+2024-12-31 23:35:25,782 [INFO] Подключение от ('127.0.0.1', 61388)
+2024-12-31 23:35:25,783 [INFO] obert client_coket in SSL-CONTEX
+2024-12-31 23:40:41,605 [INFO] creating SSL-Contex for server and start server
+2024-12-31 23:40:41,610 [INFO] creating server_soket
+2024-12-31 23:40:41,611 [INFO] proxy-server is started on::8080
+2024-12-31 23:40:41,611 [INFO] accept connect from client
+2024-12-31 23:40:56,908 [INFO] Подключение от ('127.0.0.1', 49702)
+2024-12-31 23:40:56,909 [INFO] HTTP запрос, SSL не используется
+2024-12-31 23:40:56,910 [INFO] accept connect from client
+2024-12-31 23:40:56,910 [INFO] Получен запрос от клиента
+2024-12-31 23:40:56,913 [INFO] Заголовок Host найден
+2024-12-31 23:40:56,913 [INFO] Запрос к 127.0.0.1 запрещен
+2025-01-01 00:46:08,330 [INFO] creating SSL-Contex for server and start server
+2025-01-01 00:46:08,336 [INFO] creating server_soket
+2025-01-01 00:46:08,337 [INFO] proxy-server is started on::8080
+2025-01-01 00:46:08,337 [INFO] accept connect from client
+2025-01-01 00:48:25,618 [INFO] Подключение от ('127.0.0.1', 54535)
+2025-01-01 00:48:25,620 [INFO] HTTP запрос, SSL не используется
+2025-01-01 00:48:25,622 [INFO] accept connect from client
+2025-01-01 00:48:25,622 [INFO] Получен запрос от клиента
+2025-01-01 00:48:25,622 [INFO] Заголовок Host найден
+2025-01-01 00:48:25,622 [INFO] Запрос к 127.0.0.1 запрещен
+2025-01-01 00:53:13,694 [INFO] creating SSL-Contex for server and start server
+2025-01-01 00:53:13,701 [INFO] creating server_soket
+2025-01-01 00:53:13,702 [INFO] proxy-server is started on::8080
+2025-01-01 00:53:13,702 [INFO] accept connect from client
+2025-01-01 00:53:29,638 [INFO] Подключение от ('127.0.0.1', 54647)
+2025-01-01 00:53:29,639 [INFO] HTTP запрос, SSL не используется
+2025-01-01 00:53:29,641 [INFO] accept connect from client
+2025-01-01 00:53:29,641 [INFO] Получен запрос от клиента
+2025-01-01 00:53:29,642 [INFO] Заголовок Host найден
+2025-01-01 00:53:29,642 [INFO] Запрос к 127.0.0.1 запрещен
+2025-01-01 00:56:32,736 [INFO] creating SSL-Contex for server and start server
+2025-01-01 00:56:32,742 [INFO] creating server_soket
+2025-01-01 00:56:32,744 [INFO] proxy-server is started on::8080
+2025-01-01 00:56:32,744 [INFO] accept connect from client
+2025-01-01 00:56:52,627 [INFO] creating SSL-Contex for server and start server
+2025-01-01 00:56:52,634 [INFO] creating server_soket
+2025-01-01 00:56:52,635 [INFO] proxy-server is started on::8080
+2025-01-01 00:56:52,635 [INFO] accept connect from client
+2025-01-01 01:02:12,855 [INFO] creating SSL-Contex for server and start server
+2025-01-01 01:02:12,861 [INFO] creating server_soket
+2025-01-01 01:02:12,863 [INFO] proxy-server is started on::8080
+2025-01-01 01:02:12,863 [INFO] accept connect from client
+2025-01-01 01:12:26,001 [INFO] creating SSL-Contex for server and start server
+2025-01-01 01:12:26,011 [INFO] creating server_soket
+2025-01-01 01:12:26,014 [INFO] proxy-server is started on::8080
+2025-01-01 01:12:26,014 [INFO] accept connect from client
+2025-01-01 01:12:49,314 [INFO] Подключение от ('127.0.0.1', 54967)
+2025-01-01 01:12:49,316 [INFO] HTTP запрос, SSL не используется
+2025-01-01 01:12:49,318 [INFO] accept connect from client
+2025-01-01 01:12:49,319 [INFO] Получен запрос от клиента
+2025-01-01 01:12:49,319 [INFO] Заголовок Host найден
+2025-01-01 01:12:49,320 [INFO] Запрос к 127.0.0.1 запрещен
+2025-01-01 01:18:46,218 [INFO] creating SSL-Contex for server and start server
+2025-01-01 01:18:46,224 [INFO] creating server_soket
+2025-01-01 01:18:46,225 [INFO] proxy-server is started on::8080
+2025-01-01 01:18:46,225 [INFO] accept connect from client
+2025-01-01 01:18:50,136 [INFO] creating SSL-Contex for server and start server
+2025-01-01 01:18:50,146 [INFO] creating server_soket
+2025-01-01 01:18:50,147 [INFO] proxy-server is started on::8080
+2025-01-01 01:18:50,147 [INFO] accept connect from client
+2025-01-01 01:23:00,967 [INFO] creating SSL-Contex for server and start server
+2025-01-01 01:23:00,978 [INFO] creating server_soket
+2025-01-01 01:23:00,979 [INFO] proxy-server is started on::8080
+2025-01-01 01:23:00,979 [INFO] accept connect from client
+2025-01-01 01:23:21,995 [INFO] Подключение от ('127.0.0.1', 55193)
+2025-01-01 01:23:21,997 [INFO] HTTP запрос, SSL не используется
+2025-01-01 01:23:22,005 [INFO] accept connect from client
+2025-01-01 01:23:22,006 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\nContent-Type: application/octet-stream\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-01 01:23:22,006 [INFO] Заголовок Host найден
+2025-01-01 01:23:22,007 [INFO] Запрос к 127.0.0.1 запрещен

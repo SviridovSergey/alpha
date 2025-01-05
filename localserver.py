@@ -1,48 +1,49 @@
 import asyncio
-import random
-import requests
 import logging
+import aiohttp
+import ssl
+
 # Настройка логирования
 logging.basicConfig(
-    level=logging.INFO,  # Уровень логирования (DEBUG, INFO, WARNING, ERROR, CRITICAL)
-    format="%(asctime)s [%(levelname)s] %(message)s",  # Формат сообщений
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
-        logging.FileHandler("server.log"),  # Логи записываются в файл server.log
-        logging.StreamHandler()  # Логи выводятся в консоль
+        logging.FileHandler("local_server.log"),
+        logging.StreamHandler()
     ]
 )
+
+async def forward_to_proxy(data, proxy_host, proxy_port):
+    """Пересылает данные на прокси-сервер."""
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.post(f"http://{proxy_host}:{proxy_port}", data=data) as response:
+                if response.status == 200:
+                    logging.info(f"Ответ от прокси-сервера: {await response.text()}")
+                else:
+                    logging.error(f"Ошибка от прокси-сервера: {response.status}")
+    except aiohttp.ClientError as e:
+        logging.error(f"Ошибка при пересылке на прокси-сервер: {e}")
+    except Exception as e:
+        logging.error(f"Неизвестная ошибка: {e}")
 
 async def handle_client(reader, writer):
     addr = writer.get_extra_info('peername')
     logging.info(f"Подключение от {addr!r}")
     try:
         while True:
+            # Чтение данных от клиента
             data = await reader.read(4096)
             if not data:
                 break
+            # Логируем данные как байты, а не как строку
             logging.info(f"Получено от клиента: {data}")
 
-            # Изменяем IP-адрес клиента на случайный
-            random_ip = f"{random.randint(1, 255)}.{random.randint(1, 255)}.{random.randint(1, 255)}.{random.randint(1, 255)}"
-            logging.info(f"Измененный IP-адрес: {random_ip}")
+            # Пересылка данных на прокси-сервер
+            proxy_host = "127.0.0.1"  # Адрес прокси-сервера
+            proxy_port = 8080  # Порт прокси-сервера
+            await forward_to_proxy(data, proxy_host, proxy_port)
 
-            # Пересылаем пакет на прокси-сервер
-            proxy_host = 'localhost'
-            proxy_port = 8080
-            proxies = {
-                'http': f'http://{proxy_host}:{proxy_port}',
-                'https': f'http://{proxy_host}:{proxy_port}'
-            }
-            try:
-                # Отправляем данные на прокси-сервер
-                response = requests.post('http://example.com', data=data, proxies=proxies)
-                response.raise_for_status()
-                logging.info(f"Ответ от прокси-сервера: {response.text}")
-            except requests.exceptions.RequestException as e:
-                logging.error(f"Ошибка при отправке на прокси-сервер: {e}")
-
-    except asyncio.CancelledError:
-        pass
     except Exception as e:
         logging.error(f"Ошибка: {e}")
     finally:
@@ -51,8 +52,15 @@ async def handle_client(reader, writer):
         logging.info(f"Клиент {addr!r} отключился.")
 
 async def main():
-    server = await asyncio.start_server(handle_client, '127.0.0.1', 8888)
-    logging.info(f"Локальный сервер запущен на 127.0.0.1:8888")
+    # Создаем SSL-контекст
+    ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
+    ssl_context.load_cert_chain(certfile="cert.pem", keyfile="key.pem")  # Укажите пути к сертификату и ключу
+
+    # Запускаем сервер с поддержкой HTTPS
+    server = await asyncio.start_server(
+        handle_client, '127.0.0.1', 8888, ssl=ssl_context
+    )
+    logging.info(f"Локальный сервер запущен на https://127.0.0.1:8888")
     async with server:
         await server.serve_forever()
 

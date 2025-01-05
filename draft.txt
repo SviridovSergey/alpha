@@ -174,7 +174,7 @@ from scapy.all import *
 подключение моего сервера к удаленному серверу
 изменение Ip адреса(хз как надо гуглить и насиловать нейронку(()
 :C
-путь:\Users\svse3\PycharmProjects\tgbots\ProjectVPN
+путь:C:\Users\svse3\PycharmProjects\fulprojects\ProjectVPN
 путь на ноуте:C:\Users\svse3\PycharmProjects\fulprojects\ProjectVPN
 №динам подмена аip ажресса
 
