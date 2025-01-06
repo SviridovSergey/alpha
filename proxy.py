@@ -4,6 +4,7 @@ import ssl
 import logging
 import random
 import ipaddress
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Настройка логирования
 logging.basicConfig(
@@ -34,21 +35,23 @@ with open('proxy_ips.txt', 'r') as f:
         except ValueError:
             logging.warning(f"Invalid IP address skipped: {line}")
 
-# Список IP-адресов прокси-серверов
-proxy_ips = []
-with open('proxy_ips.txt', 'r') as f:
-    proxy_ips = [line.strip() for line in f]
+# Словарь для хранения доступных IP-адресов
+available_proxy_ips = {}
 
 def is_allowed(host, ip):
     """Проверяет, разрешен ли домен или IP-адрес."""
+    logging.info('запущена проверка host,ip')
     if host in allowed_domains:
+        logging.info('проверка пройдена host')
         return True
     if ip in allowed_ip:
+        logging.info('проверка пройдена ip')
         return True
     return False
 
 def is_ip_legit(ip, port, timeout=2):
     """Проверяет, доступен ли IP-адрес и порт."""
+    logging.info(f'запущена проверка на легитимность ip: {ip}')
     try:
         # Создаем сокет
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -57,25 +60,46 @@ def is_ip_legit(ip, port, timeout=2):
         result = sock.connect_ex((ip, port))
         sock.close()
         # Если результат 0, IP-адрес доступен
-        return result == 0
+        logging.info(f'ip {ip} прошел проверку')
+        if result==0:
+            return True
     except Exception as e:
-        logging.error(f"Ошибка при проверке IP-адреса {ip}: {e}")
+        logging.warning(f'ip {ip} не прошел проверку: {e}')
         return False
 
-def get_legit_proxy_ip(port=8080):
+def update_available_proxy_ips(port=80):
+    """Обновляет словарь доступных IP-адресов с использованием многопоточности."""
+    global available_proxy_ips
+    
+    logging.info('запущено обновление ip-адресов')
+    # Используем ThreadPoolExecutor для многопоточной проверки
+    with ThreadPoolExecutor(max_workers=50) as executor:
+        # Создаем futures для каждого IP-адреса
+        futures = {executor.submit(is_ip_legit, ip, port): ip for ip in allowed_ip}
+
+        # Обрабатываем результаты по мере их завершения
+        for future in as_completed(futures):
+            ip = futures[future]
+            try:
+                is_available = future.result()
+                available_proxy_ips[ip] = is_available
+            except Exception as e:
+                logging.error(f"Ошибка при проверке IP {ip}: {e}")
+                available_proxy_ips[ip] = False
+
+    logging.info('обновление ip-адресов завершено')
+
+def get_legit_proxy_ip(port=80):
     """Возвращает случайный доступный IP-адрес из списка."""
-    while True:
-        if not proxy_ips:
-            raise ValueError("Список IP-адресов прокси-серверов пуст")
-        # Выбираем случайный IP-адрес
-        proxy_ip = random.choice(proxy_ips)
-        # Проверяем, доступен ли он
-        if is_ip_legit(proxy_ip, port):
-            return proxy_ip
-        else:
-            # Удаляем недоступный IP-адрес из списка
-            proxy_ips.remove(proxy_ip)
-            logging.warning(f"IP-адрес {proxy_ip} недоступен, удален из списка")
+    logging.info('запущена выборка случайного ip-адреса')
+    update_available_proxy_ips(port)  # Обновляем список доступных IP-адресов
+    legit_ips = [ip for ip, is_available in available_proxy_ips.items() if is_available]
+    if legit_ips:
+        logging.info('проверка окончена, выбран случайный IP')
+        return random.choice(legit_ips)
+    else:
+        logging.error("Нет доступных IP-адресов прокси-серверов")
+        raise ValueError("Нет доступных IP-адресов прокси-серверов")
 
 def handle_client(client_socket):
     """Обрабатывает соединение клиента."""
@@ -117,7 +141,7 @@ def handle_client(client_socket):
             server_socket = ssl_context.wrap_socket(server_socket, server_hostname=host)
             logging.info("Создано HTTPS-соединение с целевым сервером")
         else:
-            logging.info('Создано HTTP-соединение с целевым сервером')
+            logging.info('HTTP-соединение с целевым сервером не создано')
 
         server_socket.connect((host, port))
 
@@ -141,7 +165,7 @@ def handle_client(client_socket):
     finally:
         client_socket.close()
 
-def start_proxy_server(host=get_legit_proxy_ip(), port=8080):
+def start_proxy_server(host='0.0.0.0', port=80):
     """Запускает прокси-сервер."""
     logging.info('creating SSL-Contex for server and start server')
     ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
@@ -180,4 +204,4 @@ def start_proxy_server(host=get_legit_proxy_ip(), port=8080):
         server_socket.close()
 
 if __name__ == "__main__":
-    start_proxy_server()
+    start_proxy_server(host='0.0.0.0', port=80)    
