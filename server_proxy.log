@@ -6518,3 +6518,57 @@
 2025-01-06 07:56:17,002 [INFO] creating server_soket
 2025-01-06 07:56:17,004 [INFO] proxy-server is started on:0.0.0.0:80
 2025-01-06 07:56:17,005 [INFO] accept connect from client
+2025-01-07 20:12:02,905 [INFO] creating SSL-Contex for server and start server
+2025-01-07 20:12:02,936 [INFO] creating server_soket
+2025-01-07 20:12:02,937 [INFO] proxy-server is started on:0.0.0.0:80
+2025-01-07 20:12:02,937 [INFO] accept connect from client
+2025-01-07 20:19:58,874 [INFO] creating SSL-Contex for server and start server
+2025-01-07 20:19:58,882 [INFO] creating server_soket
+2025-01-07 20:19:58,883 [INFO] proxy-server is started on:0.0.0.0:8080
+2025-01-07 20:19:58,884 [INFO] accept connect from client
+2025-01-07 20:20:11,408 [INFO] Подключение от ('127.0.0.1', 60142)
+2025-01-07 20:20:11,410 [INFO] HTTP запрос, SSL не используется
+2025-01-07 20:20:11,412 [INFO] accept connect from client
+2025-01-07 20:20:11,412 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\nContent-Type: application/octet-stream\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-07 20:20:11,431 [INFO] Заголовок Host найден
+2025-01-07 20:20:11,431 [INFO] запущена выборка случайного ip-адреса
+2025-01-07 20:20:11,432 [INFO] запущено обновление ip-адресов
+2025-01-07 20:20:11,433 [ERROR] Ошибка: name 'allowed_ip' is not defined
+2025-01-07 20:24:29,211 [INFO] creating SSL-Contex for server and start server
+2025-01-07 20:24:29,217 [INFO] creating server_soket
+2025-01-07 20:24:29,218 [INFO] proxy-server is started on:0.0.0.0:8080
+2025-01-07 20:24:29,218 [INFO] accept connect from client
+2025-01-07 20:24:51,941 [INFO] Подключение от ('127.0.0.1', 60217)
+2025-01-07 20:24:51,943 [INFO] HTTP запрос, SSL не используется
+2025-01-07 20:24:51,944 [INFO] accept connect from client
+2025-01-07 20:24:51,944 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\nContent-Type: application/octet-stream\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-07 20:24:51,945 [INFO] Заголовок Host найден
+2025-01-07 20:24:51,945 [INFO] запущена выборка случайного ip-адреса
+2025-01-07 20:24:51,945 [INFO] запущено обновление ip-адресов
+2025-01-07 20:24:51,945 [ERROR] Ошибка: name 'allowed_ip' is not defined
+2025-01-07 20:25:28,087 [INFO] creating SSL-Contex for server and start server
+2025-01-07 20:25:28,093 [INFO] creating server_soket
+2025-01-07 20:25:28,094 [INFO] proxy-server is started on:0.0.0.0:8080
+2025-01-07 20:25:28,094 [INFO] accept connect from client
+2025-01-07 20:25:42,392 [INFO] Подключение от ('127.0.0.1', 60232)
+2025-01-07 20:25:42,393 [INFO] HTTP запрос, SSL не используется
+2025-01-07 20:25:42,395 [INFO] accept connect from client
+2025-01-07 20:25:42,395 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\nContent-Type: application/octet-stream\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-07 20:25:42,396 [INFO] Заголовок Host найден
+2025-01-07 20:25:42,396 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-07 20:25:44,446 [ERROR] Ошибка: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-01-07 20:29:05,515 [INFO] creating SSL-Contex for server and start server
+2025-01-07 20:29:05,521 [INFO] creating server_soket
+2025-01-07 20:29:05,522 [INFO] proxy-server is started on:0.0.0.0:8080
+2025-01-07 20:29:05,522 [INFO] accept connect from client
+2025-01-07 20:29:32,324 [INFO] Подключение от ('127.0.0.1', 60254)
+2025-01-07 20:29:32,324 [INFO] HTTP запрос, SSL не используется
+2025-01-07 20:29:32,326 [INFO] accept connect from client
+2025-01-07 20:29:32,326 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\nContent-Type: application/octet-stream\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-07 20:29:32,326 [INFO] Заголовок Host найден
+2025-01-07 20:29:32,326 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-07 20:29:34,353 [ERROR] Целевой сервер отверг подключение: 127.0.0.1:80
+2025-01-07 20:32:55,209 [INFO] creating SSL-Contex for server and start server
+2025-01-07 20:32:55,215 [INFO] creating server_soket
+2025-01-07 20:32:55,216 [INFO] proxy-server is started on:0.0.0.0:8080
+2025-01-07 20:32:55,216 [INFO] accept connect from client

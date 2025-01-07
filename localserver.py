@@ -16,7 +16,9 @@ logging.basicConfig(
 async def forward_to_proxy(data, proxy_host, proxy_port):
     """Пересылает данные на прокси-сервер."""
     try:
-        async with aiohttp.ClientSession() as session:
+        logging.info(f"Подключение к прокси-серверу {proxy_host}:{proxy_port}")
+        timeout = aiohttp.ClientTimeout(total=10)  # Тайм-аут для соединения
+        async with aiohttp.ClientSession(timeout=timeout) as session:
             async with session.post(f"http://{proxy_host}:{proxy_port}", data=data) as response:
                 if response.status == 200:
                     logging.info(f"Ответ от прокси-сервера: {await response.text()}")
@@ -40,7 +42,7 @@ async def handle_client(reader, writer):
             logging.info(f"Получено от клиента: {data}")
 
             # Пересылка данных на прокси-сервер
-            proxy_host = "127.0.0.1"  # Адрес прокси-сервера
+            proxy_host = "0.0.0.0"  # Адрес прокси-сервера
             proxy_port = 8080  # Порт прокси-сервера
             await forward_to_proxy(data, proxy_host, proxy_port)
 
