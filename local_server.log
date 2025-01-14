@@ -103,3 +103,157 @@ User-Agent: Python/3.13 aiohttp/3.11.11
 2025-01-07 20:33:07,657 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
 2025-01-07 20:33:07,657 [INFO] Подключение к прокси-серверу 0.0.0.0:8080
 2025-01-07 20:33:07,659 [ERROR] Ошибка при пересылке на прокси-сервер: Cannot connect to host 0.0.0.0:8080 ssl:default [Неверный формат сетевого имени]
+2025-01-13 13:15:36,793 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-13 13:15:47,213 [INFO] Подключение от ('127.0.0.1', 62724)
+2025-01-13 13:15:47,213 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-13 13:15:47,214 [INFO] Подключение к прокси-серверу 0.0.0.0:8080
+2025-01-13 13:15:47,216 [ERROR] Ошибка при пересылке на прокси-сервер: Cannot connect to host 0.0.0.0:8080 ssl:default [Неверный формат сетевого имени]
+2025-01-13 13:21:25,350 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-13 13:21:34,516 [INFO] Подключение от ('127.0.0.1', 62773)
+2025-01-13 13:21:34,519 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-13 13:21:34,521 [INFO] Подключение к прокси-серверу 0.0.0.0:8080
+2025-01-13 13:21:34,524 [ERROR] Ошибка при пересылке на прокси-сервер: Cannot connect to host 0.0.0.0:8080 ssl:default [Неверный формат сетевого имени]
+2025-01-13 13:22:58,891 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-13 13:23:06,858 [INFO] Подключение от ('127.0.0.1', 62787)
+2025-01-13 13:23:06,858 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-13 13:23:06,858 [INFO] Подключение к прокси-серверу 0.0.0.0:8080
+2025-01-13 13:23:06,859 [ERROR] Ошибка при пересылке на прокси-сервер: Cannot connect to host 0.0.0.0:8080 ssl:default [Неверный формат сетевого имени]
+2025-01-13 13:26:03,894 [ERROR] Ошибка: [WinError 64] Указанное сетевое имя более недоступно
+2025-01-13 13:26:03,894 [ERROR] Unhandled exception in client_connected_cb
+transport: <asyncio.sslproto._SSLProtocolTransport object at 0x00000182A9476CF0>
+Traceback (most recent call last):
+  File "C:\Users\abcda\AppData\Local\Programs\Python\Python313\Lib\asyncio\windows_events.py", line 463, in finish_socket_func
+    return ov.getresult()
+           ~~~~~~~~~~~~^^
+OSError: [WinError 64] Указанное сетевое имя более недоступно
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abcda\vscode\alpha\localserver.py", line 53, in handle_client
+    await writer.wait_closed()
+  File "C:\Users\abcda\AppData\Local\Programs\Python\Python313\Lib\asyncio\streams.py", line 358, in wait_closed
+    await self._protocol._get_close_waiter(self)
+  File "C:\Users\abcda\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 286, in _loop_reading
+    length = fut.result()
+  File "C:\Users\abcda\AppData\Local\Programs\Python\Python313\Lib\asyncio\windows_events.py", line 804, in _poll
+    value = callback(transferred, key, ov)
+  File "C:\Users\abcda\AppData\Local\Programs\Python\Python313\Lib\asyncio\windows_events.py", line 467, in finish_socket_func
+    raise ConnectionResetError(*exc.args)
+ConnectionResetError: [WinError 64] Указанное сетевое имя более недоступно
+2025-01-14 08:35:22,498 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 08:35:33,406 [INFO] Подключение от ('127.0.0.1', 63585)
+2025-01-14 08:35:33,407 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 08:35:33,408 [INFO] Подключение к прокси-серверу 0.0.0.0:8080
+2025-01-14 08:35:33,411 [ERROR] Ошибка при пересылке на прокси-сервер: Cannot connect to host 0.0.0.0:8080 ssl:default [Неверный формат сетевого имени]
+2025-01-14 08:40:34,059 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 08:40:45,388 [INFO] Подключение от ('127.0.0.1', 63718)
+2025-01-14 08:40:45,388 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 08:40:45,389 [INFO] Подключение к прокси-серверу 0.0.0.0:8080
+2025-01-14 08:40:45,389 [ERROR] Ошибка при пересылке на прокси-сервер: Cannot connect to host 0.0.0.0:8080 ssl:default [Неверный формат сетевого имени]
+2025-01-14 08:41:50,038 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 08:41:57,758 [INFO] Подключение от ('127.0.0.1', 63749)
+2025-01-14 08:41:57,759 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 08:41:57,759 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 08:41:59,825 [ERROR] Ошибка при пересылке на прокси-сервер: Server disconnected
+2025-01-14 08:46:58,419 [INFO] Клиент ('127.0.0.1', 63749) отключился.
+2025-01-14 08:49:16,823 [INFO] Подключение от ('127.0.0.1', 63852)
+2025-01-14 08:49:16,825 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nConnection: keep-alive\r\nCache-Control: max-age=0\r\nsec-ch-ua: "Chromium";v="130", "YaBrowser";v="24.12", "Not?A_Brand";v="99", "Yowser";v="2.5"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: "Windows"\r\nUpgrade-Insecure-Requests: 1\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 YaBrowser/24.12.0.0 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\r\nSec-Fetch-Site: none\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nAccept-Encoding: gzip, deflate, br, zstd\r\nAccept-Language: ru,en;q=0.9\r\n\r\n'
+2025-01-14 08:49:16,826 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 08:49:18,892 [ERROR] Ошибка при пересылке на прокси-сервер: Server disconnected
+2025-01-14 08:49:24,261 [INFO] Клиент ('127.0.0.1', 63852) отключился.
+2025-01-14 08:55:59,960 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 08:56:05,254 [INFO] Подключение от ('127.0.0.1', 63913)
+2025-01-14 08:56:05,256 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 08:56:05,256 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 08:56:07,301 [ERROR] Ошибка при пересылке на прокси-сервер: Server disconnected
+2025-01-14 09:01:48,650 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 09:02:00,277 [INFO] Подключение от ('127.0.0.1', 63958)
+2025-01-14 09:02:00,277 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 09:02:00,277 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 09:02:02,325 [ERROR] Ошибка при пересылке на прокси-сервер: Server disconnected
+2025-01-14 09:04:34,003 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 09:04:49,781 [INFO] Подключение от ('127.0.0.1', 64010)
+2025-01-14 09:04:49,782 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:80\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 09:04:49,782 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 09:04:49,808 [ERROR] Ошибка при пересылке на прокси-сервер: Server disconnected
+2025-01-14 11:50:32,403 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 11:52:39,873 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 11:52:47,729 [INFO] Подключение от ('127.0.0.1', 51051)
+2025-01-14 11:52:47,730 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 11:52:47,730 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 11:52:49,771 [ERROR] Ошибка при пересылке на прокси-сервер: Server disconnected
+2025-01-14 11:57:48,448 [INFO] Клиент ('127.0.0.1', 51051) отключился.
+2025-01-14 11:59:03,809 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 11:59:05,973 [INFO] Подключение от ('127.0.0.1', 51138)
+2025-01-14 11:59:05,973 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 11:59:05,973 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 11:59:05,997 [ERROR] Ошибка при пересылке на прокси-сервер: Server disconnected
+2025-01-14 12:04:06,411 [INFO] Клиент ('127.0.0.1', 51138) отключился.
+2025-01-14 12:09:19,519 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 12:09:25,562 [INFO] Подключение от ('127.0.0.1', 51196)
+2025-01-14 12:09:25,563 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:09:25,563 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 12:09:27,608 [ERROR] Ошибка при пересылке на прокси-сервер: Server disconnected
+2025-01-14 12:12:11,613 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 12:12:19,649 [INFO] Подключение от ('127.0.0.1', 51212)
+2025-01-14 12:12:19,650 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:12:19,651 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 12:12:19,660 [ERROR] Ошибка при пересылке на прокси-сервер: Server disconnected
+2025-01-14 12:14:38,189 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 12:14:46,221 [INFO] Подключение от ('127.0.0.1', 51232)
+2025-01-14 12:14:46,222 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:14:46,222 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 12:14:46,229 [ERROR] Ошибка при пересылке на прокси-сервер: Server disconnected
+2025-01-14 12:15:28,516 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 12:15:35,332 [INFO] Подключение от ('127.0.0.1', 51243)
+2025-01-14 12:15:35,332 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:15:35,332 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 12:15:35,340 [ERROR] Ошибка при пересылке на прокси-сервер: Server disconnected
+2025-01-14 12:19:21,538 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 12:19:26,803 [INFO] Подключение от ('127.0.0.1', 51270)
+2025-01-14 12:19:26,803 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:19:26,804 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 12:19:26,811 [ERROR] Ошибка при пересылке на прокси-сервер: Server disconnected
+2025-01-14 12:22:54,589 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 12:23:03,202 [INFO] Подключение от ('127.0.0.1', 51293)
+2025-01-14 12:23:03,203 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:23:03,203 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 12:23:03,210 [ERROR] Ошибка при пересылке на прокси-сервер: Server disconnected
+2025-01-14 12:28:03,416 [INFO] Клиент ('127.0.0.1', 51293) отключился.
+2025-01-14 12:31:25,818 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 12:31:35,146 [INFO] Подключение от ('127.0.0.1', 51359)
+2025-01-14 12:31:35,146 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:31:35,146 [INFO] Отправка запроса на целевой сервер
+2025-01-14 12:31:35,147 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 12:31:35,175 [INFO] Ответ от прокси-сервера: 
+2025-01-14 12:36:35,421 [INFO] Клиент ('127.0.0.1', 51359) отключился.
+2025-01-14 12:41:01,370 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 12:41:09,361 [INFO] Подключение от ('127.0.0.1', 51496)
+2025-01-14 12:41:09,361 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:41:09,361 [INFO] Отправка запроса на целевой сервер
+2025-01-14 12:41:09,362 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 12:41:09,376 [INFO] Подключение к прокси серверу удалось
+2025-01-14 12:41:19,414 [ERROR] Неизвестная ошибка: 
+2025-01-14 12:42:16,979 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 12:42:24,458 [INFO] Подключение от ('127.0.0.1', 51516)
+2025-01-14 12:42:24,458 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:42:24,459 [INFO] Отправка запроса на целевой сервер
+2025-01-14 12:42:24,459 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 12:42:24,469 [INFO] Подключение к прокси серверу удалось
+2025-01-14 12:42:35,411 [ERROR] Ошибка: 
+2025-01-14 12:43:18,020 [INFO] Локальный сервер запущен на https://127.0.0.1:8888
+2025-01-14 12:43:23,393 [INFO] Подключение от ('127.0.0.1', 51528)
+2025-01-14 12:43:23,394 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:43:23,394 [INFO] Отправка запроса на целевой сервер
+2025-01-14 12:43:23,394 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 12:43:23,403 [INFO] Подключение к прокси серверу удалось
+2025-01-14 12:43:33,411 [ERROR] Ошибка: 
+2025-01-14 12:43:33,418 [INFO] Клиент ('127.0.0.1', 51528) отключился.
+2025-01-14 12:43:33,425 [INFO] Подключение от ('127.0.0.1', 51531)
+2025-01-14 12:43:33,425 [INFO] Получено от клиента: b'GET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:43:33,426 [INFO] Отправка запроса на целевой сервер
+2025-01-14 12:43:33,426 [INFO] Подключение к прокси-серверу 127.0.0.1:8080
+2025-01-14 12:43:33,434 [INFO] Подключение к прокси серверу удалось
+2025-01-14 12:43:44,416 [ERROR] Ошибка: 
+2025-01-14 12:43:44,418 [INFO] Клиент ('127.0.0.1', 51531) отключился.

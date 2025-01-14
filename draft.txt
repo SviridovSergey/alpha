@@ -175,6 +175,6 @@ from scapy.all import *
 изменение Ip адреса(хз как надо гуглить и насиловать нейронку(()
 :C
 путь:C:\Users\svse3\PycharmProjects\fulprojects\ProjectVPN
-путь на ноуте:C:\Users\svse3\PycharmProjects\fulprojects\ProjectVPN
+путь на ноуте:C:\Users\abcda\vscode\alpha\
 №динам подмена аip ажресса
 

@@ -32,12 +32,13 @@ def handle_client(client_socket):
             return
         logging.info("Заголовок Host найден")
 
+        # Извлекаем хост и порт из заголовка Host
         host = host_line.split(b":")[1].strip().decode("utf-8")
-        port = 443 if request.startswith(b"CONNECT") else 80  # Определяем порт (HTTPS или HTTP)
+        port = 443 if request.startswith(b"CONNECT") else 8888  # Определяем порт (HTTPS или HTTP)
 
         # Создаем соединение с целевым сервером
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_socket.settimeout(10)  # Тайм-аут для соединения с целевым сервером
+        server_socket.settimeout(30)  # Увеличиваем тайм-аут
 
         try:
             if port == 443:  # Если HTTPS
@@ -51,9 +52,12 @@ def handle_client(client_socket):
 
             # Если это HTTPS-запрос, отправляем клиенту подтверждение
             if port == 443:
+                logging.info('Это HTTP запрос, не HTTPS')
+            else:
                 client_socket.sendall(b"HTTP/1.1 200 Connection Established\r\n\r\n")
 
             # Отправляем запрос на целевой сервер
+            logging.info(f"Отправка запроса на целевой сервер: {request}")
             server_socket.sendall(request)
 
             # Получаем ответ от целевого сервера
@@ -73,12 +77,9 @@ def handle_client(client_socket):
 
     except Exception as e:
         logging.error(f"Ошибка: {e}")
-    finally:
-        client_socket.close()
-        if 'server_socket' in locals():
-            server_socket.close()
+    
 
-def start_proxy_server(host="0.0.0.0", port=8080):
+def start_proxy_server(host="127.0.0.1", port=8080):
     """Запускает прокси-сервер."""
     logging.info('creating SSL-Contex for server and start server')
     ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
@@ -117,4 +118,4 @@ def start_proxy_server(host="0.0.0.0", port=8080):
         server_socket.close()
 
 if __name__ == "__main__":
-    start_proxy_server(host="0.0.0.0", port=8080)
+    start_proxy_server(host="127.0.0.1", port=8080)

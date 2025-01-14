@@ -30,7 +30,7 @@ async def send_request(local_server_ip, local_server_port):
     except aiohttp.ClientError as e:
         logging.error(f"Ошибка клиента при отправке HTTPS-запроса: {e}")
     except Exception as e:
-        logging.error(f"Неизвестная ошибка: {e}")
+        logging.error(f"Сервер отключал вас от сервера: {e}")
 
 async def main(local_server_ip, local_server_port):
     await send_request(local_server_ip, local_server_port)

@@ -19,15 +19,21 @@ async def forward_to_proxy(data, proxy_host, proxy_port):
         logging.info(f"Подключение к прокси-серверу {proxy_host}:{proxy_port}")
         timeout = aiohttp.ClientTimeout(total=10)  # Тайм-аут для соединения
         async with aiohttp.ClientSession(timeout=timeout) as session:
-            async with session.post(f"http://{proxy_host}:{proxy_port}", data=data) as response:
+            # Формируем HTTP-запрос
+            headers = {"Content-Type": "application/octet-stream"}
+            async with session.post(
+                f"http://{proxy_host}:{proxy_port}",
+                data=data,
+                headers=headers
+            ) as response:
                 if response.status == 200:
+                    logging.info('Подключение к прокси серверу удалось')
                     logging.info(f"Ответ от прокси-сервера: {await response.text()}")
                 else:
                     logging.error(f"Ошибка от прокси-сервера: {response.status}")
     except aiohttp.ClientError as e:
         logging.error(f"Ошибка при пересылке на прокси-сервер: {e}")
-    except Exception as e:
-        logging.error(f"Неизвестная ошибка: {e}")
+
 
 async def handle_client(reader, writer):
     addr = writer.get_extra_info('peername')
@@ -42,8 +48,10 @@ async def handle_client(reader, writer):
             logging.info(f"Получено от клиента: {data}")
 
             # Пересылка данных на прокси-сервер
-            proxy_host = "0.0.0.0"  # Адрес прокси-сервера
+            
+            proxy_host = "127.0.0.1"  # Адрес прокси-сервера
             proxy_port = 8080  # Порт прокси-сервера
+            logging.info(f"Отправка запроса на целевой сервер")
             await forward_to_proxy(data, proxy_host, proxy_port)
 
     except Exception as e:

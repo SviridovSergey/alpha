@@ -6572,3 +6572,217 @@
 2025-01-07 20:32:55,215 [INFO] creating server_soket
 2025-01-07 20:32:55,216 [INFO] proxy-server is started on:0.0.0.0:8080
 2025-01-07 20:32:55,216 [INFO] accept connect from client
+2025-01-13 13:06:48,978 [INFO] creating SSL-Contex for server and start server
+2025-01-13 13:06:49,065 [INFO] creating server_soket
+2025-01-13 13:06:49,065 [INFO] proxy-server is started on:0.0.0.0:8080
+2025-01-13 13:06:49,065 [INFO] accept connect from client
+2025-01-13 13:15:27,270 [INFO] creating SSL-Contex for server and start server
+2025-01-13 13:15:27,280 [INFO] creating server_soket
+2025-01-13 13:15:27,283 [INFO] proxy-server is started on:0.0.0.0:8080
+2025-01-13 13:15:27,283 [INFO] accept connect from client
+2025-01-13 13:21:20,859 [INFO] creating SSL-Contex for server and start server
+2025-01-13 13:21:20,888 [INFO] creating server_soket
+2025-01-13 13:21:20,889 [INFO] proxy-server is started on:0.0.0.0:8080
+2025-01-13 13:21:20,890 [INFO] accept connect from client
+2025-01-13 13:22:54,510 [INFO] creating SSL-Contex for server and start server
+2025-01-13 13:22:54,516 [INFO] creating server_soket
+2025-01-13 13:22:54,517 [INFO] proxy-server is started on:0.0.0.0:8080
+2025-01-13 13:22:54,517 [INFO] accept connect from client
+2025-01-14 08:35:18,406 [INFO] creating SSL-Contex for server and start server
+2025-01-14 08:35:18,444 [INFO] creating server_soket
+2025-01-14 08:35:18,445 [INFO] proxy-server is started on:0.0.0.0:8080
+2025-01-14 08:35:18,445 [INFO] accept connect from client
+2025-01-14 08:40:27,784 [INFO] creating SSL-Contex for server and start server
+2025-01-14 08:40:27,787 [INFO] creating server_soket
+2025-01-14 08:40:27,788 [INFO] proxy-server is started on:0.0.0.0:8080
+2025-01-14 08:40:27,788 [INFO] accept connect from client
+2025-01-14 08:41:45,520 [INFO] creating SSL-Contex for server and start server
+2025-01-14 08:41:45,524 [INFO] creating server_soket
+2025-01-14 08:41:45,525 [INFO] proxy-server is started on:127.0.0.1:8080
+2025-01-14 08:41:45,525 [INFO] accept connect from client
+2025-01-14 08:41:57,759 [INFO] Подключение от ('127.0.0.1', 63750)
+2025-01-14 08:41:57,761 [INFO] HTTP запрос, SSL не используется
+2025-01-14 08:41:57,762 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\nContent-Type: application/octet-stream\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 08:41:57,762 [INFO] accept connect from client
+2025-01-14 08:41:57,763 [INFO] Заголовок Host найден
+2025-01-14 08:41:57,764 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 08:41:59,802 [ERROR] Целевой сервер отверг подключение: 127.0.0.1:80
+2025-01-14 08:49:16,828 [INFO] Подключение от ('127.0.0.1', 63853)
+2025-01-14 08:49:16,829 [INFO] HTTP запрос, SSL не используется
+2025-01-14 08:49:16,831 [INFO] accept connect from client
+2025-01-14 08:49:16,831 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 723\r\nContent-Type: application/octet-stream\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nConnection: keep-alive\r\nCache-Control: max-age=0\r\nsec-ch-ua: "Chromium";v="130", "YaBrowser";v="24.12", "Not?A_Brand";v="99", "Yowser";v="2.5"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: "Windows"\r\nUpgrade-Insecure-Requests: 1\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 YaBrowser/24.12.0.0 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\r\nSec-Fetch-Site: none\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nAccept-Encoding: gzip, deflate, br, zstd\r\nAccept-Language: ru,en;q=0.9\r\n\r\n'
+2025-01-14 08:49:16,832 [INFO] Заголовок Host найден
+2025-01-14 08:49:16,833 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 08:49:18,891 [ERROR] Целевой сервер отверг подключение: 127.0.0.1:80
+2025-01-14 08:55:50,426 [INFO] creating SSL-Contex for server and start server
+2025-01-14 08:55:50,430 [INFO] creating server_soket
+2025-01-14 08:55:50,430 [INFO] proxy-server is started on:127.0.0.1:8080
+2025-01-14 08:55:50,431 [INFO] accept connect from client
+2025-01-14 08:56:05,257 [INFO] Подключение от ('127.0.0.1', 63914)
+2025-01-14 08:56:05,258 [INFO] HTTP запрос, SSL не используется
+2025-01-14 08:56:05,260 [INFO] accept connect from client
+2025-01-14 08:56:05,260 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\nContent-Type: application/octet-stream\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 08:56:05,260 [INFO] Заголовок Host найден
+2025-01-14 08:56:05,260 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 08:56:07,300 [ERROR] Целевой сервер отверг подключение: 127.0.0.1:80
+2025-01-14 09:01:45,000 [INFO] creating SSL-Contex for server and start server
+2025-01-14 09:01:45,003 [INFO] creating server_soket
+2025-01-14 09:01:45,004 [INFO] proxy-server is started on:127.0.0.1:8080
+2025-01-14 09:01:45,004 [INFO] accept connect from client
+2025-01-14 09:02:00,278 [INFO] Подключение от ('127.0.0.1', 63959)
+2025-01-14 09:02:00,279 [INFO] HTTP запрос, SSL не используется
+2025-01-14 09:02:00,280 [INFO] accept connect from client
+2025-01-14 09:02:00,280 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\nContent-Type: application/octet-stream\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 09:02:00,280 [INFO] Заголовок Host найден
+2025-01-14 09:02:00,280 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 09:02:02,322 [ERROR] Целевой сервер отверг подключение: 127.0.0.1:80
+2025-01-14 09:04:29,213 [INFO] creating SSL-Contex for server and start server
+2025-01-14 09:04:29,216 [INFO] creating server_soket
+2025-01-14 09:04:29,217 [INFO] proxy-server is started on:127.0.0.1:8080
+2025-01-14 09:04:29,217 [INFO] accept connect from client
+2025-01-14 09:04:49,783 [INFO] Подключение от ('127.0.0.1', 64011)
+2025-01-14 09:04:49,784 [INFO] HTTP запрос, SSL не используется
+2025-01-14 09:04:49,785 [INFO] accept connect from client
+2025-01-14 09:04:49,785 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 124\r\nContent-Type: application/octet-stream\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:80\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 09:04:49,786 [INFO] Заголовок Host найден
+2025-01-14 09:04:49,786 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 11:50:28,549 [INFO] creating SSL-Contex for server and start server
+2025-01-14 11:50:28,573 [INFO] creating server_soket
+2025-01-14 11:50:28,574 [INFO] proxy-server is started on:127.0.0.1:8080
+2025-01-14 11:50:28,574 [INFO] accept connect from client
+2025-01-14 11:52:36,194 [INFO] creating SSL-Contex for server and start server
+2025-01-14 11:52:36,199 [INFO] creating server_soket
+2025-01-14 11:52:36,200 [INFO] proxy-server is started on:127.0.0.1:8080
+2025-01-14 11:52:36,201 [INFO] accept connect from client
+2025-01-14 11:52:47,731 [INFO] Подключение от ('127.0.0.1', 51052)
+2025-01-14 11:52:47,733 [INFO] HTTP запрос, SSL не используется
+2025-01-14 11:52:47,735 [INFO] accept connect from client
+2025-01-14 11:52:47,735 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\nContent-Type: application/octet-stream\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 11:52:47,736 [INFO] Заголовок Host найден
+2025-01-14 11:52:47,736 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 11:52:49,770 [ERROR] Целевой сервер отверг подключение: 127.0.0.1:80
+2025-01-14 11:58:59,517 [INFO] creating SSL-Contex for server and start server
+2025-01-14 11:58:59,524 [INFO] creating server_soket
+2025-01-14 11:58:59,525 [INFO] proxy-server is started on:127.0.0.1:8080
+2025-01-14 11:58:59,525 [INFO] accept connect from client
+2025-01-14 11:59:05,975 [INFO] Подключение от ('127.0.0.1', 51139)
+2025-01-14 11:59:05,975 [INFO] HTTP запрос, SSL не используется
+2025-01-14 11:59:05,976 [INFO] accept connect from client
+2025-01-14 11:59:05,976 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\nContent-Type: application/octet-stream\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 11:59:05,976 [INFO] Заголовок Host найден
+2025-01-14 11:59:05,977 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 11:59:05,977 [INFO] HTTP запрос 
+2025-01-14 12:09:15,001 [INFO] creating SSL-Contex for server and start server
+2025-01-14 12:09:15,008 [INFO] creating server_soket
+2025-01-14 12:09:15,009 [INFO] proxy-server is started on:127.0.0.1:8080
+2025-01-14 12:09:15,009 [INFO] accept connect from client
+2025-01-14 12:09:25,566 [INFO] Подключение от ('127.0.0.1', 51197)
+2025-01-14 12:09:25,567 [INFO] HTTP запрос, SSL не используется
+2025-01-14 12:09:25,568 [INFO] accept connect from client
+2025-01-14 12:09:25,568 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nContent-Type: application/octet-stream\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:09:25,568 [INFO] Заголовок Host найден
+2025-01-14 12:09:25,568 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 12:09:27,607 [ERROR] Целевой сервер отверг подключение: 127.0.0.1:80
+2025-01-14 12:12:07,667 [INFO] creating SSL-Contex for server and start server
+2025-01-14 12:12:07,674 [INFO] creating server_soket
+2025-01-14 12:12:07,675 [INFO] proxy-server is started on:127.0.0.1:8080
+2025-01-14 12:12:07,675 [INFO] accept connect from client
+2025-01-14 12:12:19,654 [INFO] Подключение от ('127.0.0.1', 51213)
+2025-01-14 12:12:19,655 [INFO] HTTP запрос, SSL не используется
+2025-01-14 12:12:19,657 [INFO] accept connect from client
+2025-01-14 12:12:19,657 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nContent-Type: application/octet-stream\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:12:19,658 [INFO] Заголовок Host найден
+2025-01-14 12:12:19,658 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 12:14:34,017 [INFO] creating SSL-Contex for server and start server
+2025-01-14 12:14:34,023 [INFO] creating server_soket
+2025-01-14 12:14:34,024 [INFO] proxy-server is started on:127.0.0.1:8080
+2025-01-14 12:14:34,024 [INFO] accept connect from client
+2025-01-14 12:14:46,223 [INFO] Подключение от ('127.0.0.1', 51233)
+2025-01-14 12:14:46,225 [INFO] HTTP запрос, SSL не используется
+2025-01-14 12:14:46,226 [INFO] accept connect from client
+2025-01-14 12:14:46,227 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nContent-Type: application/octet-stream\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:14:46,227 [INFO] Заголовок Host найден
+2025-01-14 12:14:46,227 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 12:15:24,184 [INFO] creating SSL-Contex for server and start server
+2025-01-14 12:15:24,190 [INFO] creating server_soket
+2025-01-14 12:15:24,191 [INFO] proxy-server is started on:127.0.0.1:8080
+2025-01-14 12:15:24,191 [INFO] accept connect from client
+2025-01-14 12:15:35,336 [INFO] Подключение от ('127.0.0.1', 51244)
+2025-01-14 12:15:35,336 [INFO] HTTP запрос, SSL не используется
+2025-01-14 12:15:35,337 [INFO] accept connect from client
+2025-01-14 12:15:35,337 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nContent-Type: application/octet-stream\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:15:35,338 [INFO] Заголовок Host найден
+2025-01-14 12:15:35,338 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 12:18:50,038 [INFO] creating SSL-Contex for server and start server
+2025-01-14 12:18:50,044 [INFO] creating server_soket
+2025-01-14 12:18:50,045 [INFO] proxy-server is started on:127.0.0.1:8080
+2025-01-14 12:18:50,045 [INFO] accept connect from client
+2025-01-14 12:19:26,807 [INFO] Подключение от ('127.0.0.1', 51271)
+2025-01-14 12:19:26,807 [INFO] HTTP запрос, SSL не используется
+2025-01-14 12:19:26,808 [INFO] accept connect from client
+2025-01-14 12:19:26,808 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nContent-Type: application/octet-stream\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:19:26,809 [INFO] Заголовок Host найден
+2025-01-14 12:19:26,809 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 12:22:44,104 [INFO] creating SSL-Contex for server and start server
+2025-01-14 12:22:44,110 [INFO] creating server_soket
+2025-01-14 12:22:44,111 [INFO] proxy-server is started on:127.0.0.1:8080
+2025-01-14 12:22:44,111 [INFO] accept connect from client
+2025-01-14 12:23:03,204 [INFO] Подключение от ('127.0.0.1', 51294)
+2025-01-14 12:23:03,207 [INFO] HTTP запрос, SSL не используется
+2025-01-14 12:23:03,208 [INFO] accept connect from client
+2025-01-14 12:23:03,208 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nContent-Type: application/octet-stream\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:23:03,208 [INFO] Заголовок Host найден
+2025-01-14 12:23:03,209 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 12:31:21,609 [INFO] creating SSL-Contex for server and start server
+2025-01-14 12:31:21,616 [INFO] creating server_soket
+2025-01-14 12:31:21,617 [INFO] proxy-server is started on:127.0.0.1:8080
+2025-01-14 12:31:21,617 [INFO] accept connect from client
+2025-01-14 12:31:35,149 [INFO] Подключение от ('127.0.0.1', 51360)
+2025-01-14 12:31:35,150 [INFO] HTTP запрос, SSL не используется
+2025-01-14 12:31:35,152 [INFO] accept connect from client
+2025-01-14 12:31:35,152 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nContent-Type: application/octet-stream\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:31:35,152 [INFO] Заголовок Host найден
+2025-01-14 12:31:35,153 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 12:31:35,153 [INFO] Отправка запроса на целевой сервер: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nContent-Type: application/octet-stream\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:31:35,174 [INFO] Закрытие соединения с целевым сервером
+2025-01-14 12:31:35,174 [INFO] Закрытие соединения с клиентом
+2025-01-14 12:40:53,977 [INFO] creating SSL-Contex for server and start server
+2025-01-14 12:40:53,983 [INFO] creating server_soket
+2025-01-14 12:40:53,984 [INFO] proxy-server is started on:127.0.0.1:8080
+2025-01-14 12:40:53,984 [INFO] accept connect from client
+2025-01-14 12:41:09,365 [INFO] Подключение от ('127.0.0.1', 51497)
+2025-01-14 12:41:09,366 [INFO] HTTP запрос, SSL не используется
+2025-01-14 12:41:09,368 [INFO] accept connect from client
+2025-01-14 12:41:09,368 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nContent-Type: application/octet-stream\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:41:09,368 [INFO] Заголовок Host найден
+2025-01-14 12:41:09,369 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 12:41:09,371 [INFO] Отправка запроса на целевой сервер: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nContent-Type: application/octet-stream\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:42:11,146 [INFO] creating SSL-Contex for server and start server
+2025-01-14 12:42:11,152 [INFO] creating server_soket
+2025-01-14 12:42:11,153 [INFO] proxy-server is started on:127.0.0.1:8080
+2025-01-14 12:42:11,153 [INFO] accept connect from client
+2025-01-14 12:42:24,463 [INFO] Подключение от ('127.0.0.1', 51517)
+2025-01-14 12:42:24,464 [INFO] HTTP запрос, SSL не используется
+2025-01-14 12:42:24,466 [INFO] accept connect from client
+2025-01-14 12:42:24,466 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nContent-Type: application/octet-stream\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:42:24,467 [INFO] Заголовок Host найден
+2025-01-14 12:42:24,467 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 12:42:24,469 [INFO] Отправка запроса на целевой сервер: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nContent-Type: application/octet-stream\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:43:13,968 [INFO] creating SSL-Contex for server and start server
+2025-01-14 12:43:13,974 [INFO] creating server_soket
+2025-01-14 12:43:13,975 [INFO] proxy-server is started on:127.0.0.1:8080
+2025-01-14 12:43:13,976 [INFO] accept connect from client
+2025-01-14 12:43:23,398 [INFO] Подключение от ('127.0.0.1', 51529)
+2025-01-14 12:43:23,399 [INFO] HTTP запрос, SSL не используется
+2025-01-14 12:43:23,401 [INFO] accept connect from client
+2025-01-14 12:43:23,401 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nContent-Type: application/octet-stream\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:43:23,401 [INFO] Заголовок Host найден
+2025-01-14 12:43:23,401 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 12:43:23,402 [INFO] Отправка запроса на целевой сервер: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nContent-Type: application/octet-stream\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:43:33,428 [INFO] Подключение от ('127.0.0.1', 51532)
+2025-01-14 12:43:33,430 [INFO] HTTP запрос, SSL не используется
+2025-01-14 12:43:33,431 [INFO] accept connect from client
+2025-01-14 12:43:33,431 [INFO] Получен запрос от клиента: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nContent-Type: application/octet-stream\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
+2025-01-14 12:43:33,432 [INFO] Заголовок Host найден
+2025-01-14 12:43:33,432 [INFO] Создано HTTP-соединение с целевым сервером
+2025-01-14 12:43:33,433 [INFO] Отправка запроса на целевой сервер: b'POST / HTTP/1.1\r\nHost: 127.0.0.1:8080\r\nContent-Type: application/octet-stream\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\nContent-Length: 126\r\n\r\nGET / HTTP/1.1\r\nHost: 127.0.0.1:8888\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Python/3.13 aiohttp/3.11.11\r\n\r\n'
